@@ -66,13 +66,13 @@ Execute below command to create ingress instance:
 kubectl create -f kongIngress.yaml -n operators       
 ```
 
-Output:
+You will see following Output:
        
 ```
 
 ```
         
-Step 3. See that Kong Ingress works and relays requests to the application.
+Step 3. Verify that Kong Ingress works and relays requests to the application.
    
 ```execute
  PROXY_IP=$(kubectl get service example-kong-kong-proxy -o jsonpath={.spec.clusterIP})
