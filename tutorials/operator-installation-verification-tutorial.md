@@ -1,5 +1,5 @@
 ---
-title: Jaeger Operator Installation Verification Tutorial
+title: Kong Operator Installation Verification Tutorial
 description: This tutorial explains how to verify that the Kong Operator installed properly in the namespace
 ---
 
