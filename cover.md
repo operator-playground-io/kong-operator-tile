@@ -14,8 +14,14 @@ Kong Operator can deploy Kong in various configurations, for example:
 - a standalone Kong gateway (without the ingress controller; either DB-enabled or DB-less)
 - a standalone Ingress Controller (configuring an external instance of Kong)
 
-### Operator's features are as follows:
+### Kong's Architecture:
 
+
+By integrating with the Kubernetes Ingress Controller spec, Kong ties directly to the Kubernetes lifecycle. As applications are deployed and new services are created, Kong will automatically live configure itself to serve traffic to these services.
+
+Below is a high-level architectural diagram of Kong api in kubernetes cluster:
+
+![](_images/architecture.png)
 
 
 
