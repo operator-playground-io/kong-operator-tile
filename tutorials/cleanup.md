@@ -1,5 +1,5 @@
 ---
-title: Jaeger Operator cleanup Tutorial
+title: Kong Operator cleanup Tutorial
 description: This tutorial explains how to cleanup Operator
 ---
 
