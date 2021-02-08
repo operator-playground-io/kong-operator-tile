@@ -1,15 +1,15 @@
 {
-  "name": "Grafana Operator",
-  "description": "Grafana Operator",
-  "logo": "_images/SalesStack.png",
+  "name": "Kong Operator",
+  "description": "Kong Operator",
+  "logo": "_images/kong-logo.png",
   "has_supporting_content": true,
-  "stack_id": "grafana-operator",
+  "stack_id": "kong-operator",
   "type": "stack",
-  "categories": ["Monitoring"],
+  "categories": ["Networking"],
   "platform": "Kubernetes",
   "cover": "cover.md",
   "meta": {
-    "Monitoring": ["Grafana"],
+    "Monitoring": ["Kong"],
     "Type":[
          "Operators"
       ],
@@ -20,17 +20,10 @@
   "Deployment Namespace": "operators"
 },
   "commands": [
-    {
-      "description": "Set Namespace",
-      "exec": "export GRAFANA_OPERATOR_NAMESPACE=my-grafana-operator"
-    },
-    {
-      "description": "Prepare Workspace",
-      "exec": "cd /home/student/projects && mkdir grafana-operator && cd grafana-operator"
-    },
+    
 	{
       "description": "Install Operator",
-      "exec": "kubectl create -f https://operatorhub.io/install/grafana-operator.yaml"
+      "exec": "kubectl create -f https://operatorhub.io/install/kong.yaml"
     }
   ],
   "display": [
