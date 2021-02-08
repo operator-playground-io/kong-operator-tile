@@ -1,13 +1,25 @@
+---
+title: Kong Operator Tutorial to deploy an example Application Service and expose it with Kong Ingress
+description: This tutorial explains how to deploy an example Application Service and expose it with Kong Ingress
+---
+
+In order to deploy an example Application Service and expose it with Kong Ingress, Please follow following steps:
 
 
-1. Deploy an example Service and expose it with an Ingress:
-    1. Deploy the echo service:
+Step 1. Deploy the Application "echo" service:
+        
+        ```execute
+        kubectl create -f https://bit.ly/echo-service
         ```
-        kubectl apply -f https://bit.ly/echo-service
+        
+        Output:
         ```
-    1. Create an Ingress:
+        
         ```
-        kubectl create -f - <<EOF
+Step 2. Create an Ingress:
+        
+       ```execute
+       cat <<'EOF' >kongIngress.yaml 
         apiVersion: extensions/v1beta1
         kind: Ingress
         metadata:
@@ -28,10 +40,26 @@
                   servicePort: 8080
         EOF
         ```
-1. See that Kong works and relays requests to the application!
-    ```
+        
+       Output:
+       
+       ```
+       ```
+        
+Step 3. See that Kong Ingress works and relays requests to the application.
+   
+    ```execute
     PROXY_IP=$(kubectl get service example-kong-kong-proxy -o jsonpath={.spec.clusterIP})
     ```
-    ```
+    
+- Make a request to the application service using curl command:
+    
+    ```execute
     curl http://$PROXY_IP/foo/
+    ```
+    
+    Output:
+    
+    ```
+    
     ```
