@@ -39,6 +39,7 @@ Note: Here kongInstance.yaml  is the CR of the Kong Operator Instance.
  
   ```copycommand
   rm -rf kongInstance.yaml
+  rm -rf kongIngress.yaml
   ```
   
   Similarly, you can delete rest of yaml files.
