@@ -26,7 +26,7 @@ After the installation is successful , you can check your operator's pod by exec
 kubectl get pods -n operators
 ```
 
-You should see a pod starting with 'kong-operator' with Ready value '1/1' and Status 'Running' like the output as below.
+You should see a pod starting with 'kong-operator' with Ready value '1/1' and Status 'Running' like the output as below:
 
 ```output
 NAME                                READY   STATUS    RESTARTS   AGE
