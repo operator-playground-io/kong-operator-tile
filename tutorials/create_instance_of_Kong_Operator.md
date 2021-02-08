@@ -3,11 +3,13 @@ title: Jaeger Operator Tutorial to create an instance of Kong Operator
 description: This tutorial explains how to create an instance of Kong Operator
 ---
 
-### Create Instance of Kong Operator
 
-Kong Operator Instance can be created using below Custom Resource Definition YAML files.
 
-**step 1:** Create a custom resource YAML file
+### Create Kong Ingress Controller 
+
+Kong Ingress Controller  can be created using below Custom Resource Definition YAML file:
+
+**Step 1:** Create a custom resource YAML file
 
 ```execute
 cat <<'EOF' >kongInstance.yaml 
@@ -34,25 +36,29 @@ spec:
 EOF
 ```
 
-**Step 2:** create Kong Operator instance in the namespace "operators"
+**Step 2:** Deploy the Kong Ingress Controller with "example-ingress-class" Ingress class:
 
 ```execute
 kubectl create -f kongInstance.yaml 
 ```
 
-You will see the following output:
+You will see the following resources created:
 
 ```
 kong.charts.helm.k8s.io/example-kong created
 ```
 
-Check the Pods status:
+Please wait till Pod STATUS will be "Running" and then proceed further.
+
+
+Check pods status:
+
 
 ```execute
 kubectl get pods
 ```
 
-You will see similar to this output:
+You will see a similar Output as below:
 
 ```
 NAME                                 READY   STATUS    RESTARTS   AGE
