@@ -3,7 +3,7 @@ title: Kong Operator Tutorial to deploy an example Application Service and expos
 description: This tutorial explains how to deploy an example Application Service and expose it with Kong Ingress
 ---
 
-In order to deploy an example Application Service and expose it with Kong Ingress, Please follow following steps:
+In order to deploy an example Application Service and expose it with Kong Ingress, Please follow below steps:
 
 
 Step 1. Deploy the Application "echo" service usinge below command:
