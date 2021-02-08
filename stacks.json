@@ -17,7 +17,7 @@
   "has_dataset": false,
   "has_api": false,
   "git_url": "https://github.com/operator-playground-io/kong-operator-tile.git",
-  "git_commit": "771ec5d41a7bb7704499499f6573e2df1ed1c4f5",
+  "git_commit": "94f4a9b55f7daad0a4db85fac45d4aa35e86a099",
   "installTime": "5 minutes",
   "isStacksSaved": true
 }
