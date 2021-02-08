@@ -36,6 +36,34 @@ echo-85fb7989cc-56bmr                1/1     Running   0          36m
 example-kong-kong-86777c7d7b-pq2sk   2/2     Running   0          36m
 ```
 
+Check all the kubernetes resources:
+
+```execute
+kubectl get all 
+```
+
+
+You will see similar to this output:
+
+```
+NAME                                     READY   STATUS    RESTARTS   AGE
+pod/echo-85fb7989cc-sksnf                1/1     Running   0          13m
+pod/example-kong-kong-86777c7d7b-zrmkc   2/2     Running   0          15m
+
+NAME                              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+service/echo                      ClusterIP   10.106.166.98   <none>        8080/TCP,80/TCP              13m
+service/example-kong-kong-proxy   NodePort    10.99.37.0      <none>        80:32352/TCP,443:32372/TCP   15m
+service/kubernetes                ClusterIP   10.96.0.1       <none>        443/TCP                      49m
+
+NAME                                READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/echo                1/1     1            1           13m
+deployment.apps/example-kong-kong   1/1     1            1           15m
+
+NAME                                           DESIRED   CURRENT   READY   AGE
+replicaset.apps/echo-85fb7989cc                1         1         1       13m
+replicaset.apps/example-kong-kong-86777c7d7b   1         1         1       15m
+```
+
 
        
 Step 2. Create below yaml which will create a Custom Resource for Kong Ingress:
@@ -66,7 +94,7 @@ EOF
 - Execute below command to create ingress instance:
 
 ```execute
-kubectl create -f kongIngress.yaml -n operators       
+kubectl create -f kongIngress.yaml  
 ```
 
 You will see Output similar to this:
