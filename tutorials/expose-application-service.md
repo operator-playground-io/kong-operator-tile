@@ -35,7 +35,7 @@ example-kong-kong-86777c7d7b-pq2sk   2/2     Running   0          36m
 
 
        
-Step 2. Create an Ingress:
+Step 2. Create below yaml which will create a Custom Resource for Kong Ingress:
         
 ```execute
 cat <<'EOF' >kongIngress.yaml 
@@ -60,18 +60,23 @@ spec:
 EOF
 ```
         
-        
-        
+Execute below command to create ingress instance:
+
+```execute
+kubectl create -f kongIngress.yaml -n operators       
+```
+
 Output:
        
 ```
+
 ```
         
 Step 3. See that Kong Ingress works and relays requests to the application.
    
 ```execute
  PROXY_IP=$(kubectl get service example-kong-kong-proxy -o jsonpath={.spec.clusterIP})
- ```
+```
     
 - Make a request to the application service using curl command:
     
