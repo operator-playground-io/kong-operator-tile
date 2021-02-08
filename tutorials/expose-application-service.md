@@ -6,21 +6,24 @@ description: This tutorial explains how to deploy an example Application Service
 In order to deploy an example Application Service and expose it with Kong Ingress, Please follow following steps:
 
 
-Step 1. Deploy the Application "echo" service:
+Step 1. Deploy the Application "echo" service usinge below command:
         
 ```execute
 kubectl create -f https://bit.ly/echo-service
 ```
        
        
-You will see following output:
+You will see a similar Output as below:
 
 ```
 service/echo created
 deployment.apps/echo created
 ```
 
-Check the pod status :
+Please wait till Pod STATUS will be "Running" and then proceed further.
+
+
+Check pods status:
 
 ```execute
 kubectl get pods 
@@ -60,17 +63,34 @@ spec:
 EOF
 ```
         
-Execute below command to create ingress instance:
+- Execute below command to create ingress instance:
 
 ```execute
 kubectl create -f kongIngress.yaml -n operators       
 ```
 
-You will see following Output:
+You will see Output similar to this:
        
 ```
+ingress.extensions/demo created
+```
+
+
+Check pods status:
+
+```execute
+kubectl get pods 
+```
+You will see Output similar to this:
 
 ```
+NAME                                 READY   STATUS    RESTARTS   AGE
+echo-85fb7989cc-56bmr                1/1     Running   0          36m
+example-kong-kong-86777c7d7b-pq2sk   2/2     Running   0          36m
+```
+
+Please wait till Pod STATUS will be "Running" and then proceed further.
+
         
 Step 3. Verify that Kong Ingress works and relays requests to the application.
    
@@ -124,3 +144,5 @@ Request Headers:
 Request Body:
         -no body in request-
 ```
+
+Conclusion: From the above response output we can ensure that application service is accessible using this kong ingress controller.
