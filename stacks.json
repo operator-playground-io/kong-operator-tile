@@ -1,16 +1,16 @@
 {
-  "title": "Grafana Operator",
-  "description": "Grafana Operator",
-  "logo": "_images/SalesStack.png",
+  "title": "Kong Operator",
+  "description": "Kong Operator",
+  "logo": "_images/kong-logo.png",
   "enabled": true,
   "category_label": [
     "Operators"
   ],
   "document": "data-logging-stack",
-  "stack_id": "grafana-operator",
+  "stack_id": "kong-operator",
   "type": "stack",
   "categories": [
-    "Monitoring"
+    "Networking"
   ],
   "is_certified": true,
   "has_support": true,
