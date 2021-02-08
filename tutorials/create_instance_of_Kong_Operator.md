@@ -1,5 +1,5 @@
 ---
-title: Jaeger Operator Tutorial to create an instance of Kong Operator
+title: Kong Operator Tutorial to create an instance of Kong Operator
 description: This tutorial explains how to create an instance of Kong Operator
 ---
 
@@ -7,7 +7,7 @@ description: This tutorial explains how to create an instance of Kong Operator
 
 ### Create Kong Ingress Controller 
 
-Kong Ingress Controller  can be created using below Custom Resource Definition YAML file:
+Kong Ingress Controller can be created using below Custom Resource Definition YAML file:
 
 **Step 1:** Create a custom resource YAML file
 
