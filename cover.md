@@ -1,32 +1,21 @@
-<h1 align="center">Grafana Operator</h1>
+<h1 align="center">Kong Operator</h1>
 
-![Logo](_images/logo.PNG)
+![Logo](_images/kong-logo.png)
 
 
 ### Overview:
 
-A Kubernetes Operator based on the Operator SDK for creating and managing Grafana instances.
-Grafana is an open platform for beautiful analytics and monitoring. It allows you to create dashboard visualizations of key metrics.Grafana supports a huge number of data sources.The most common use case of Grafana is displaying time series data such as memory or CPU over time, alongside the current usage data.
-Grafana runs as a process on your computer or server, and you access the interface through your browser. Your dashboard can display your data as single numbers, graphs, charts.
+Kong is a popular open-source cloud-native API gateway. Kong Operator is a Kubernetes operator which manages Kong and Kong Enterprise clusters.
+With Kong Operator running in your cluster, you can spin up multiple instances of Kong, each of them configured by a Kong custom resource.
+
+Kong Operator can deploy Kong in various configurations, for example:
+
+- as a Kubernetes ingress controller, enabling you to expose Kubernetes Services via Kong,
+- a standalone Kong gateway (without the ingress controller; either DB-enabled or DB-less)
+- a standalone Ingress Controller (configuring an external instance of Kong)
 
 ### Operator's features are as follows:
 
-The Operator can deploy and manage a Grafana instance on Kubernetes and OpenShift. The following features are supported:
-
-- Install Grafana to a namespace.
-- Configure Grafana through the custom resource.
-- Import Grafana dashboards from the same or other namespaces.
-- Import Grafana data sources from the same namespace.
-- Install Plugins (panels).
-
-### Grafana Operator Architecture
-
-Grafana allows you to query, visualize and understand your metrics. 
-The data was pulled from Prometheus which was plugged-in to the Grafana dashboard as a data source. Queries were fired from the dashboard with different expressions such as min, avg etc.Grafana has native Prometheus support.It comes with a large number of inbuilt reusable dashboards to bring your data together and share it.
-
-A high level Prometheus & Grafana Architecture diagram is shown below :
-
-![](_images/Grafana-Architecture.png)
 
 
 
@@ -34,8 +23,8 @@ A high level Prometheus & Grafana Architecture diagram is shown below :
 
 In this tutorial,we are going to cover following topics:
 
-1. Install Grafana Operator and verify its successful installation.
-2. Create Grafana Instance and verify status of pods and services.
-3. Monitoring a DB or any server using Prometheus and Grafana Operators.
-4. How to access Grafana dashboard to visualize the different metrics.
+1. Install Kong Operator and verify its successful installation.
+2. Create Kong Instance to deploy Kong Ingress Controller and verify status of pods and services.
+3. Deploy an example application Service and expose it with kong Ingress.
+4. Verify that Kong ingress works and relays requests to the application.
 5. Cleanup Operator.
