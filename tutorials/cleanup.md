@@ -12,13 +12,14 @@ description: This tutorial explains how to cleanup Operator
 
 Example:
  
- ```copycommand
- kubectl delete -f jaegerInstance.yaml 
+ ```execute
+ kubectl delete -f kongInstance.yaml 
+  kubectl delete -f kongIngress.yaml 
  ```
 
-Note: Here jaegerInstance.yaml  is the CR of the Jaeger Operator Instance.
+Note: Here kongInstance.yaml  is the CR of the Kong Operator Instance.
 
-Similarly,delete all the custom resource.
+
  
 
 ***Delete the operator by kubectl delete command:***
@@ -27,7 +28,7 @@ Similarly,delete all the custom resource.
  Example:
  
  ```copycommand
- kubectl delete -f https://operatorhub.io/install/jaeger.yaml
+ kubectl delete -f https://operatorhub.io/install/kong.yaml
  ```
  
 
@@ -37,7 +38,7 @@ Similarly,delete all the custom resource.
  Example:
  
   ```copycommand
-  rm -rf jaegerInstance.yaml
+  rm -rf kongInstance.yaml
   ```
   
   Similarly, you can delete rest of yaml files.
