@@ -13,21 +13,19 @@ description: This tutorial explains how to cleanup Operator
 Example:
  
  ```execute
- kubectl delete -f kongInstance.yaml 
-  kubectl delete -f kongIngress.yaml 
+ kubectl delete -f kongInstance.yaml
+ kubectl delete -f https://bit.ly/echo-service
+ kubectl delete -f kongIngress.yaml 
  ```
 
-Note: Here kongInstance.yaml  is the CR of the Kong Operator Instance.
 
-
- 
 
 ***Delete the operator by kubectl delete command:***
  
  
  Example:
  
- ```copycommand
+ ```execute
  kubectl delete -f https://operatorhub.io/install/kong.yaml
  ```
  
@@ -37,9 +35,9 @@ Note: Here kongInstance.yaml  is the CR of the Kong Operator Instance.
  
  Example:
  
-  ```copycommand
+  ```execute
   rm -rf kongInstance.yaml
   rm -rf kongIngress.yaml
   ```
   
-  Similarly, you can delete rest of yaml files.
+
