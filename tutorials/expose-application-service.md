@@ -176,4 +176,5 @@ Request Body:
         -no body in request-
 ```
 
-Conclusion: From the above response output we can ensure that application service is accessible using this kong ingress controller.
+
+***Conclusion: From the above response output we can ensure that application service is accessible using this kong ingress controller.***
