@@ -23,14 +23,9 @@
          "tutorial_name":"expose-application-service.md",
          "title":"Expose an example Application Service with Kong Ingress"
       },
+      
       {
-         "description":"How to use Rate Limiting plugin and Key Authentication plugin in kong operator while exposing sevice api.",
-         "duration":"25 min",
-         "tutorial_name":"plugin.md",
-         "title":"Rate Limiting plugin and Key Authentication plugin in kong"
-      },
-      {
-         "description":"This tutorial Cleanup Jaeger Operator",
+         "description":"This tutorial Cleanup Kong Operator",
          "duration":"5 min",
          "tutorial_name":"cleanup.md",
          "title":"Cleanup Operator"
