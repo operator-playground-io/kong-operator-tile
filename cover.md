@@ -44,5 +44,4 @@ In this tutorial,we are going to cover following topics:
 2. Create Kong Instance to deploy Kong Ingress Controller and verify status of pods and services.
 3. Deploy an example application Service and expose it with kong Ingress.
 4. Verify that Kong ingress works and relays requests to the application.
-5. How to use Rate Limiting plugin and Key Authentication plugin in kong operator while exposing sevice api.
-6. Cleanup Operator.
+5. Cleanup Operator.
