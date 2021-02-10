@@ -69,7 +69,9 @@ replicaset.apps/example-kong-kong-86777c7d7b   1         1         1       15m
 
 
        
-Step 2. Create below yaml which will create a Custom Resource for Kong Ingress:
+Step 2. Our application is deployed, but we still need an Ingress Resource to serve traffic to it.
+
+Create below yaml which will create a Custom Resource Ingress:
         
 ```execute
 cat <<'EOF' >kongIngress.yaml 
@@ -129,13 +131,13 @@ Step 3. Verify that Kong Ingress works and relays requests to the application.
  PROXY_IP=$(kubectl get service example-kong-kong-proxy -o jsonpath={.spec.clusterIP})
 ```
     
-- Make a request to the application service using curl command:
+- With our Kong Ingress Controller and our application deployed, we can now start serving traffic to our application using curl command:
     
 ```execute
 curl http://$PROXY_IP/foo/
 ```
     
-You will see the response as follow:
+You will see the Output as follow:
     
 Output:
     
@@ -177,4 +179,4 @@ Request Body:
 ```
 
 
-***Conclusion: From the above response output we can ensure that application service is accessible using this kong ingress controller.***
+***Conclusion: From the above output can conclude that it start serving traffic to our application.***
