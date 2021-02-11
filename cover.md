@@ -16,8 +16,7 @@ Kong Operator can deploy Kong in various configurations, for example:
 
 ### Kong's features are as follows:
 
-- Kong is a high performance, open source API gateway, traffic control, and microservice management layer that supports the demanding networking requirements these workloads     
-  have. 
+- Kong is a high performance, open source API gateway, traffic control, and microservice management layer that supports the demanding networking requirements these workloads       have. 
 
 - To serve traffic for a deep ecosystem of software and enterprises, Kong comes supplied with a rich plugin ecosystem that extends Kong with features for authentication, traffic   control, and more.
 
