@@ -30,7 +30,7 @@ Kong Operator can deploy Kong in various configurations, for example:
 
 By integrating with the Kubernetes Ingress Controller spec, Kong ties directly to the Kubernetes lifecycle. As applications are deployed and new services are created, Kong will automatically live configure itself to serve traffic to these services.
 
-Below is a high-level architectural diagram of Kong api in kubernetes cluster:
+Below is a high-level architectural diagram of Kong api in Kubernetes cluster:
 
 ![](_images/architecture.png)
 
@@ -41,6 +41,6 @@ In this tutorial,we are going to cover following topics:
 
 1. Install Kong Operator and verify its successful installation.
 2. Create Kong Instance to deploy Kong Ingress Controller and verify status of pods and services.
-3. Deploy an example application Service and expose it with kong Ingress.
-4. Verify that Kong ingress works and relays requests to the application.
+3. Deploy an example application Service and expose it with Kong Ingress.
+4. Verify that Kong Ingress works and relays requests to the application.
 5. Cleanup Operator.
