@@ -1,37 +1,40 @@
 ---
-title: Kong Operator Tutorial to deploy an example Application Service and expose it with Kong Ingress
-description: This tutorial explains how to deploy an example Application Service and expose it with Kong Ingress
+title: Kong Operator to expose a deployed Application Service with Kong Ingress
+description: Learn how to deploy an Application Service and expose it with Kong Ingress
 ---
 
-### Deploy an example Application Service and expose it with Kong Ingress
+### Deploy an Application Service and Expose it with Kong Ingress.
 
 
-In order to deploy an example Application Service and expose it with Kong Ingress, Please follow below steps:
+To deploy an application service and expose it with Kong Ingress, please follow the steps below. Here, we are deploying an application service ‘echo’. 
 
 
-Step 1. Deploy the Application "echo" service usinge below command:
+**Step 1: Deploy the Application "echo" service usinge below command.**
         
 ```execute
 kubectl create -f https://bit.ly/echo-service
 ```
        
        
-You will see a similar Output as below:
+You will see an output like below.
 
 ```
 service/echo created
 deployment.apps/echo created
 ```
 
-Please wait till Pod STATUS will be "Running" and then proceed further.
+Please wait for the pod STATUS to be "Running", then proceed further.
 
 
-Check pods status:
+**Step 2: Please check pod's status and Kubernetes resources status.**
+
+
+- Check the pods’ status.
 
 ```execute
 kubectl get pods 
 ```
-You will see Output similar to this:
+You will see an output like below.
 
 ```
 NAME                                 READY   STATUS    RESTARTS   AGE
@@ -39,14 +42,15 @@ echo-85fb7989cc-56bmr                1/1     Running   0          36m
 example-kong-kong-86777c7d7b-pq2sk   2/2     Running   0          36m
 ```
 
-Check all the kubernetes resources:
+
+- Check all the Kubernetes resources.
 
 ```execute
 kubectl get all 
 ```
 
 
-You will see similar to this output:
+You will see an output like below.
 
 ```
 NAME                                     READY   STATUS    RESTARTS   AGE
@@ -67,12 +71,11 @@ replicaset.apps/echo-85fb7989cc                1         1         1       13m
 replicaset.apps/example-kong-kong-86777c7d7b   1         1         1       15m
 ```
 
+Our application is deployed, but we still need an Ingress Resource to serve traffic to it.
+       
+**Step 2: Create the below yaml to build a CR Ingress.**
 
        
-Step 2. Our application is deployed, but we still need an Ingress Resource to serve traffic to it.
-
-Create below yaml which will create a Custom Resource Ingress:
-        
 ```execute
 cat <<'EOF' >kongIngress.yaml 
 apiVersion: extensions/v1beta1
@@ -102,7 +105,7 @@ EOF
 kubectl create -f kongIngress.yaml  
 ```
 
-You will see Output similar to this:
+You will see an output like below.
        
 ```
 ingress.extensions/demo created
@@ -125,19 +128,23 @@ example-kong-kong-86777c7d7b-pq2sk   2/2     Running   0          36m
 Please wait till Pod STATUS will be "Running" and then proceed further.
 
         
-Step 3. Verify that Kong Ingress works and relays requests to the application.
+**Step 3: Verify that Kong Ingress works and relays the requests to the application.**
+
+With our Kong Ingress Controller and our application deployed, we can now start serving traffic to our application using curl command.  
+
+- Execute below command to get Proxy IP.
    
 ```execute
  PROXY_IP=$(kubectl get service example-kong-kong-proxy -o jsonpath={.spec.clusterIP})
 ```
     
-- With our Kong Ingress Controller and our application deployed, we can now start serving traffic to our application using curl command:
+- Execute below curl command.
     
 ```execute
 curl http://$PROXY_IP/foo/
 ```
     
-You will see the Output as follow:
+You will see an output like below.
     
 Output:
     
@@ -179,4 +186,6 @@ Request Body:
 ```
 
 
-***Conclusion: From the above output can conclude that it start serving traffic to our application.***
+### Conclusion
+
+**From the above output, we can conclude that it has started serving traffic to our application.**
