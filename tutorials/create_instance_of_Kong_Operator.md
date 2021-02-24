@@ -7,9 +7,9 @@ description: This tutorial explains how to create an instance of Kong Operator
 
 ### Create Kong Ingress Controller 
 
-Kong Ingress Controller can be created using below Custom Resource Definition YAML file:
+Kong ingress controller can be created using a custom resource YAML file:
 
-**Step 1:** Create a custom resource YAML file
+**Step 1: Create a custom resource YAML file, as below.**
 
 ```execute
 cat <<'EOF' >kongInstance.yaml 
@@ -36,7 +36,7 @@ spec:
 EOF
 ```
 
-**Step 2:** Deploy the Kong Ingress Controller with "example-ingress-class" Ingress class:
+**Step 2: Deploy the Kong Ingress Controller using Ingress class: "example-ingress-class".**
 
 ```execute
 kubectl create -f kongInstance.yaml 
@@ -48,31 +48,29 @@ You will see the following resources created:
 kong.charts.helm.k8s.io/example-kong created
 ```
 
-Please wait till Pod STATUS will be "Running" and then proceed further.
+Please wait until pod STATUS is "Running", then proceed.
 
-
-Check pods status:
-
+**Step 3: Check the status of pods using below command.**
 
 ```execute
 kubectl get pods
 ```
 
-You will see a similar Output as below:
+You will see an output like the below.
 
 ```
 NAME                                 READY   STATUS    RESTARTS   AGE
 example-kong-kong-86777c7d7b-pq2sk   2/2     Running   0          36m
 ```
 
-Check all the kubernetes resources:
+**Step 4: Check all the Kubernetes resources.**
 
 ```execute
 kubectl get all
 ```
 
 
-You will see similar to this output:
+You will see an output like the below.
 
 ```
 NAME                                     READY   STATUS    RESTARTS   AGE
@@ -90,5 +88,6 @@ replicaset.apps/example-kong-kong-86777c7d7b   1         1         1       37m
 ```
 
 
-
+### Conclusion
+You’ve successfully created the Kong Operator instance.
 
