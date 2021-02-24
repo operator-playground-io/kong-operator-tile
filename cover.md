@@ -38,10 +38,10 @@ Below is a high-level architectural diagram of Kong api in Kubernetes cluster:
 
 ### Objective of the tutorial
 
-In this tutorial,we are going to cover following topics:
+In this tutorial,we are going to cover the following topics:
 
 1. Install Kong Operator and verify its successful installation.
-2. Create Kong Instance to deploy Kong Ingress Controller and verify status of pods and services.
-3. Deploy an example application Service and expose it with Kong Ingress.
+2. Create Kong Instance to deploy Kong Ingress Controller and verify the status of pods and services.
+3. Deploy an example application Service and expose it using a Kong Ingress.
 4. Verify that Kong Ingress works and relays requests to the application.
 5. Cleanup Operator.
