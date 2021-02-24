@@ -1,6 +1,6 @@
 ---
-title: Kong Operator Tutorial to create an instance of Kong Operator
-description: This tutorial explains how to create an instance of Kong Operator
+title: Kong Operator instance creation
+description: Learn how to create an instance of Kong Operator
 ---
 
 
