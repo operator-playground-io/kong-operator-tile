@@ -5,30 +5,30 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":" A User Guide for verification of Kong Operator Installation",
+         "description":" Learn how to verify that the Kong Operator installed properly in the namespace.",
          "duration":"5 min",
          "tutorial_name":"operator-installation-verification-tutorial.md",
-         "title":"1: Kong Operator Installation Verification Tutorial"
+         "title":"1. Kong Operator Installation Verification"
       },
       {
-         "description":" Kong Operator Instance Creation tutorial",
+         "description":"Learn how to create an instance of Kong Operator",
          "duration":"10 min",
          "tutorial_name":"create_instance_of_Kong_Operator.md",
-         "title":"2: Kong Operator Instance Creation tutorial"
+         "title":"2.Kong Operator instance creation"
       },
       
       {
-         "description":"This tutorial explains how to deploy an example Application Service and expose it with Kong Ingress",
+         "description":"Learn how to deploy an Application Service and expose it with Kong Ingress.",
          "duration":"10 min",
          "tutorial_name":"expose-application-service.md",
-         "title":"3: Expose an example Application Service with Kong Ingress"
+         "title":"3. Kong Operator to expose a deployed Application Service with Kong Ingress"
       },
       
       {
-         "description":"This tutorial Cleanup Kong Operator",
+         "description":"Learn how to Cleanup the Kong Operator",
          "duration":"5 min",
          "tutorial_name":"cleanup.md",
-         "title":"4: Cleanup Operator"
+         "title":"4. Cleanup the Kong Operator"
       }
       
    ],
